@@ -5,33 +5,43 @@
     <meta name="description" content="FiverrClone">
     <meta name="author" content="CS391 Project">
     <link rel="stylesheet" href="./css/layout.css"/>
-    <title>FIVERR</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/mainpage.js"></script>
+    <title>MIVERR</title>
 </head>
 
 <body>
-
 <div id="header">
     <a href="mainpage.html">
-        <img id="logo" src="./res/fiverr2.png">
+        <img id="logo" src="./res/logo.png">
 
     </a>
-
-    <a href="./gigs.html">
-        <h2 id="gigs">Gigs</h2>
+    <a href = "mainpage.html"> 
+        <h2 id="homebutton">Home</h2>
     </a>
-    
     <a href="./profile.html">
         <h2 id="profileButton">Profile</h2>
     </a>
 
+    <a href="./gigs.html">
+        <h2 id="gigs">Create Notices</h2>
+    </a>
+    
+            <p>
+                <form id="logoutform" method="post">
+			        <input type="hidden" value="1">
+			        <input class="button" type="submit" value="Logout" id="logout">
+		        </form>
+            </p>
 </div>
 
 
 
 <section>
 
-    <form id="loginform" method="post" onsubmit="login()">
-        <h2 style="color: rgb(108, 238, 188); margin-right: 15px; margin-top: 50px;">Sign In</h2>
+    <form id="loginform" method="post">
+        <h2 class="prettyColorText" style="background-color:white;">Sign In</h2>
 
         <label for username>Username: </label>
         <br>
@@ -43,15 +53,15 @@
         <input id="passwordLogin" type="password" minlength="6" required>
         <br>
 
-        <input style="margin-top: 10px;" type="submit" value="Sign in">
+        <input class="button" style="margin-top: 10px;" type="submit" value="Sign in">
 
     </form>
 
     
     <div id="signinform">
-        <h2 style="color: rgb(108, 238, 188); margin-right: 15px; margin-top: 50px;">Register</h2>
+        <h2 class="prettyColorText" style="background-color:white;">Register</h2>
 
-        <form id="userreg" method="post" action="course.html" onsubmit="registerUser()">
+        <form id="userreg" method="post">
 
             <label for mail>Mail address:</label>
             <br>
@@ -81,7 +91,7 @@
                 <option value="Germany">Gr</option>
             </select>
             <br>
-            <input style="margin-top: 5px;" type="submit" value="Register">
+            <input class="button" style="margin-top: 5px;" type="submit" value="Register">
         </form>
 
 
@@ -89,14 +99,14 @@
     </div>
     <div id="profile">
         <div class="userProfile">
-            <h3 id="name">Welcome back buyer, {name}!</h3>
-            <p id="email">Email: {email}</p>
-            <p>
-                <button id="signOutButton" onclick="logout()" type="button">Sign Out</button>
-            </p>
+            <h3 id="userName"> </h3>
+
+            <h1 class="mainInformationBox">Welcome to Miverr!</h1>
+            <h3>In this website, you can publish notices on the jobs you want to hire people for!</h3>
+            <h3>Find numerous jobs, get the employer's information to negotiate in private!</h3>
         </div>
     </div>
-    <div>
+    <div id="feed">
         <article class="talentArticle">
             <h2>Discover Great Talent</h2>
             <p>Curated Talent Awaits You</p>
@@ -112,11 +122,10 @@
 </section>
 
 <footer>
-    <img id="footerlogo" src="./res/fiverr.jpg">
-    <article id="footer">
-        FIVERR INTERNATIONAL
-    </article>
-    
+    <h2 style="text-align:right;color:white;">CS391 Project</h2>
+    <div id="footer">
+        <img id="logo" src="./res/logo.png">
+    </div>
 </footer>
 
 </body>
