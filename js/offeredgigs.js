@@ -1,8 +1,4 @@
 $(document).ready(function () {
-    $('#logout').hide();
-    $('#profileButton').hide();
-    $('#gigs').hide();
-    $('#offeredgigs').hide();
     if(localStorage.getItem("currentUser")!=null){
         $('#signinform').hide();
         $('#loginform').hide();
@@ -51,15 +47,6 @@ function displayGigs(){
         document.getElementById('feed').appendChild(outerFrame);
     
     }
-    else{
-            var innerFrame = document.createElement('h1');
-            innerFrame.classList.add("feedBox");
-            innerFrame.innerHTML = "No notices to show! Be the first one to create one!"
-            document.getElementById('feed').appendChild(innerFrame);
-
-    }
-    
-    
 }
 
 });
