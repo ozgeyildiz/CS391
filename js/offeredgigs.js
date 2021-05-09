@@ -1,15 +1,28 @@
 $(document).ready(function () {
+
+    setBalanceText();
+
+    $('#web').click(function() {
+        buyWebDesign();
+    });
+    $('#voice').click(function() {
+        buyVoiceActing();
+    });
+    $('#music').click(function() {
+        buyMusicCover();
+    });
+
     if(localStorage.getItem("currentUser")!=null){
-       displayGigs();
-    }else{
-        window.location.replace("mainpage.html");
-    }
-    $('#logoutform').submit(function(){
-        logOut();
-    });
-    $('#edit').click(function(){
-        document.location.href = "editprofile.html";
-    });
+        displayGigs();
+     }else{
+         window.location.replace("mainpage.html");
+     }
+     $('#logoutform').submit(function(){
+         logOut();
+     });
+     $('#edit').click(function(){
+         document.location.href = "editprofile.html";
+     });
 });
 
 function displayGigs(){
@@ -48,5 +61,55 @@ function displayGigs(){
         document.getElementById('feed').appendChild(outerFrame);
     
     }
+    else{
+            var innerFrame = document.createElement('h1');
+            innerFrame.classList.add("feedBox");
+            innerFrame.innerHTML = "No notices to show! Be the first one to create one!"
+            document.getElementById('feed').appendChild(innerFrame);
+
+    }
+    
+    
 }
 
+var balance = 500;
+
+function buyWebDesign() {
+    var user = localStorage.getItem("currentUser");
+    balance -= 30;
+    if (user.balance > 30) {
+        user.balance -= 30;
+    }
+    localStorage.setItem("currentUser",user);
+
+
+    setBalanceText();
+} 
+
+function buyMusicCover() {
+    var user = localStorage.getItem("currentUser");
+    balance -= 10;
+    if (user.balance > 10) {
+        user.balance -= 10;
+    }
+    localStorage.setItem("currentUser",user);
+
+    setBalanceText();
+} 
+function buyVoiceActing() {
+    var user = localStorage.getItem("currentUser");
+    balance -= 10;
+    if (user.balance > 10) {
+        user.balance -= 10;
+    }
+    localStorage.setItem("currentUser",user);
+
+    setBalanceText();
+} 
+
+
+function setBalanceText() {
+    var user = localStorage.getItem("currentUser");
+    
+    document.getElementById('balanceText').innerHTML = balance + "$";
+}
