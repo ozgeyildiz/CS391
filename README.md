@@ -3,7 +3,7 @@
 
 Beste Nur Pacci - S011847
 
-Ataberk Uncueer - 
+Ataberk Uncueer - S011614
 
 Özge Yıldız -
 
@@ -39,4 +39,4 @@ We thank you our teacher, Esma Meral, for her support and classes that helped us
 
 Beste Nur Pacci- have created the complete backend, as well as adding multiple extra HTML pages to navigate at, and edited the mainpage. Majority of the CSS file was handled by her as well.
 
-Ataberk Uncuer-
+Ataberk Uncuer- have created the gigs offered page and slightly edited the main page.
