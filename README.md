@@ -5,7 +5,7 @@ Beste Nur Pacci - S011847
 
 Ataberk Uncueer - S011614
 
-Özge Yıldız -
+Özge Yıldız - S011905
 
 ## Description
 
@@ -35,7 +35,7 @@ We thank you our teacher, Esma Meral, for her support and classes that helped us
 
 
 ## Responsibilities
-Özge Yıldız- have created the base html of the mainpage.html, as well as imported the needed CSS file with a base classlist. On top of that, the GitHub directory was created by her.
+Özge Yıldız- have created the base layout, articles and forms of mainpage.html, made the CSS layout of mainpage.html. Added gig purchasing and balance to gigs offered page. Created GitHub directory.
 
 Beste Nur Pacci- have created the complete backend, as well as adding multiple extra HTML pages to navigate at, and edited the mainpage. Majority of the CSS file was handled by her as well.
 
