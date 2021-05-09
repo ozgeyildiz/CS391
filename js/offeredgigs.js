@@ -1,15 +1,16 @@
 $(document).ready(function () {
     if(localStorage.getItem("currentUser")!=null){
-        $('#signinform').hide();
-        $('#loginform').hide();
-        $('#logout').show();
-        $('#gigs').show();
-        $('#offeredgigs').show();
-        $('#profileButton').show();
-        document.getElementById('userName').innerHTML = "Welcome back "+localStorage.getItem('currentUser') + "!";
-        
-        displayGigs();
+       displayGigs();
+    }else{
+        window.location.replace("mainpage.html");
     }
+    $('#logoutform').submit(function(){
+        logOut();
+    });
+    $('#edit').click(function(){
+        document.location.href = "editprofile.html";
+    });
+});
 
 function displayGigs(){
     
@@ -49,4 +50,3 @@ function displayGigs(){
     }
 }
 
-});
