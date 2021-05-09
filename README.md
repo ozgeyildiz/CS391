@@ -15,6 +15,11 @@ All available job notices sent by other users can be viewed at main page. All no
 ## How to Run?
 To run this project you do not need any external downloads, no external library was used. After downloading the whole project, simply double click on the **"mainpage.html"**, which will open the web application on your browser locally. From there you are free to navigate through inside the web application.
 
+Note: This project uses localStorage in your browser to save/retrieve data. Make sure your browser version is at least following to be able to run this web application:
+**Chrome 4.0+, Edge 8.0+, Firefox 3.5+, Safari 4.0+, Opera 11.0+**
+
+
+
 ## Usage
 
 You are forced to register before being able to see any job notices published by all users. After making a valid account, you can use same information to log in. Once logged in you will be seeing all posts on the main page, each with their own *title*, *description*, *publisher*, and *contact information*. 
