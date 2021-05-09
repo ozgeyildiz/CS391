@@ -83,3 +83,6 @@ function displayProfilePictureOnNotices(username){
     img.classList.add("smallProfilePic");
     return img;
 }
+function logOut(){
+    localStorage.removeItem("currentUser");
+}
