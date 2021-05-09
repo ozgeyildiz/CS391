@@ -21,7 +21,7 @@ $(document).ready(function () {
     $("#loginform").submit(function () {
         logIn();
     });
-    $('#logoutform').submit(function(){
+    $('#logoutform').submit(function() {
         logOut();
     });
 
@@ -56,6 +56,7 @@ function logIn(){
     
 }
 
+
 function storeUser(mail, username, password , name , country){
 
     if(localStorage.getItem('userList') != null){ //get the existing data and append new info to it
@@ -66,7 +67,8 @@ function storeUser(mail, username, password , name , country){
             "username": username,
             "password":password,
             "name":name,
-            "country":country
+            "country":country,
+            "balance":500
         }
     }
     else { //initiate the json array list for users registeration information
@@ -77,7 +79,8 @@ function storeUser(mail, username, password , name , country){
             "username": username,
             "password":password,
             "name":name,
-            "country":country
+            "country":country,
+            "balance":500
         }
     }
     users.push(userData);
@@ -96,6 +99,7 @@ function getUserRegisterData(){
         mail,username,password,name,country
     };
 }
+
 function getUserLoginData(){
     var username = document.getElementById('usernameLogin').value;
     var password = document.getElementById('passwordLogin').value;
