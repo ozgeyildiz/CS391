@@ -32,6 +32,7 @@ function createUserInfoEditField(user){
     var changeName = document.createElement('input');
     changeName.type = "text";
     changeName.id = "name";
+    changeName.maxLength = "30";
     changeName.value = user.name;
     document.getElementById('fullname').appendChild(changeName);
 
@@ -79,6 +80,7 @@ function createUserInfoEditField(user){
     var changePass = document.createElement('input');
     changePass.type = "password";
     changePass.id = "password";
+    changePass.minLength = "6";
     changePass.value= user.password;
     document.getElementById('passwordBox').appendChild(changePass);
 
